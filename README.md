@@ -81,4 +81,4 @@ installer.iss     Inno Setup script
 
 **`wsl_ctl` not recognised** — open a new terminal; `PATH` changes don't reach already-running ones.
 
-**Instance not found, but it's in the list** — run `python -m src.wsl_handler.wsl_utils` to dump the parsed names. WSL emits UTF-16, and stray characters can survive parsing invisibly.
+
