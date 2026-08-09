@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.ico" alt="WSL Controller" width="128">
+  <img src="assets/icon.ico" alt="WSL Controller" width="128">
 </p>
 
 <h1 align="center">WSL Controller</h1>
