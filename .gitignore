@@ -1,0 +1,111 @@
+# ---------------------------------------------------------------------------
+# Generated build metadata
+# ---------------------------------------------------------------------------
+# Written by make_version_file.py on every build. pyproject.toml is the single
+# source of truth for the version — committing these reintroduces the drift
+# they exist to prevent.
+version_info.txt
+version.iss
+
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+build/
+dist/
+*.spec.bak
+*.manifest
+
+# Keep the PyInstaller spec: it is hand-edited configuration, not output.
+# If you generate it fresh each build with pyi-makespec, uncomment:
+# *.spec
+
+# Inno Setup
+Output/
+*.iss.bak
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Packaging
+*.egg-info/
+*.egg
+.eggs/
+MANIFEST
+pip-wheel-metadata/
+share/python-wheels/
+wheels/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ---------------------------------------------------------------------------
+# Testing and tooling caches
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# ---------------------------------------------------------------------------
+# Runtime output
+# ---------------------------------------------------------------------------
+# Adjust to wherever LoggerClass writes.
+logs/
+*.log
+
+# Local configuration that should not be shared
+.env
+.env.*
+!.env.example
+config.local.*
+
+# ---------------------------------------------------------------------------
+# Editors
+# ---------------------------------------------------------------------------
+# PyCharm: workspace.xml and friends are per-developer. The rest of .idea
+# (run configurations, code style) is often worth sharing — if you want that,
+# replace this line with the specific excludes below it.
+.idea/
+# .idea/workspace.xml
+# .idea/tasks.xml
+# .idea/usage.statistics.xml
+# .idea/shelf/
+
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------------
+# Windows
+# ---------------------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS / Linux, for anyone cloning cross-platform
+.DS_Store
+.AppleDouble
+*.tmp
