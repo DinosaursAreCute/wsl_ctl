@@ -8,6 +8,15 @@
 
 ---
 
+<p align="center">
+  <a href="../../releases"><img src="https://img.shields.io/github/v/release/DinosaursAreCute/wsl_ctl?style=flat-square&color=44cc11" alt="Latest release"></a>
+  <a href="../../releases"><img src="https://img.shields.io/github/downloads/DinosaursAreCute/wsl_ctl/total?style=flat-square" alt="Downloads"></a>
+  <a href="../../stargazers"><img src="https://img.shields.io/github/stars/DinosaursAreCute/wsl_ctl?style=flat-square" alt="Stars"></a>
+  <a href="../../commits/master"><img src="https://img.shields.io/github/last-commit/DinosaursAreCute/wsl_ctl?style=flat-square" alt="Last commit"></a>
+  <img src="https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/platform-windows-lightgrey?style=flat-square" alt="Windows,Linux">
+</p>
+
 ## What it does
 
 - List installed instances and available distributions
