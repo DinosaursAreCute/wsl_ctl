@@ -1,78 +1,45 @@
 [project]
 name = "wsl_ctl"
-version = "0.2.5"
+version = "0.2.6"
 description = "WSL Controller Menu"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
-authors = [{ name = "DinosaursAreCute" }]
-keywords = ["wsl", "cli", "menu", "windows"]
-
-classifiers = [
-    "Environment :: Console",
-    "Intended Audience :: System Administrators",
-    "Operating System :: Microsoft :: Windows",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: System :: Systems Administration",
-]
-
-dependencies = [
-    "colorama>=0.4.6",
-]
-
-[project.optional-dependencies]
-# pip install -e ".[dev]"
-dev = [
-    "pyinstaller>=6.3",
-    "ruff>=0.4",
-    "mypy>=1.9",
-    "pytest>=8.0",
-]
-
-[project.scripts]
-# Creates udmctl.exe in the venv's Scripts directory on install.
-# Point this at whatever function your main.py calls.
-udmctl = "src.main:main"
+keywords = [ "wsl", "cli", "menu", "windows",]
+classifiers = [ "Environment :: Console", "Intended Audience :: System Administrators", "Operating System :: Microsoft :: Windows", "Programming Language :: Python :: 3.11", "Topic :: System :: Systems Administration",]
+dependencies = [ "colorama>=0.4.6",]
+[[project.authors]]
+name = "DinosaursAreCute"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = [ "setuptools>=68",]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-# Your top-level package is literally named "src". Rename it to "udmctl" when
-# convenient and change this line plus the script entry point above; nothing
-# inside the modules needs to change if their imports are relative.
-packages = ["src", "src.ioHelper", "src.Utils", "src.wsl_handler"]
+[project.license]
+text = "MIT"
 
-# ---------------------------------------------------------------------------
-# Tooling
-# ---------------------------------------------------------------------------
+[project.optional-dependencies]
+dev = [ "pyinstaller>=6.3", "ruff>=0.4", "mypy>=1.9", "pytest>=8.0",]
+
+[project.scripts]
+udmctl = "src.main:main"
+
+[tool.setuptools]
+packages = [ "src", "src.ioHelper", "src.Utils", "src.wsl_handler",]
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
 
-[tool.ruff.lint]
-select = [
-    "E", "W",    # pycodestyle
-    "F",         # pyflakes — catches the unused/undefined name bugs
-    "I",         # import sorting
-    "B",         # bugbear — mutable defaults, loop-variable binding
-    "UP",        # pyupgrade
-    "SIM",       # simplifications
-    "RET",       # return consistency
-]
-ignore = [
-    "E501",      # line length is handled by the formatter
-]
-
 [tool.mypy]
 python_version = "3.11"
 warn_return_any = true
 warn_unused_ignores = true
-# Start lenient; tighten once the annotations settle.
 check_untyped_defs = true
 disallow_untyped_defs = false
 
+[tool.ruff.lint]
+select = [ "E", "W", "F", "I", "B", "UP", "SIM", "RET",]
+ignore = [ "E501",]
+
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = [ "tests",]
