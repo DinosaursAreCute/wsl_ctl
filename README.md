@@ -6,7 +6,7 @@
 
 <p align="center">A terminal menu for managing WSL distributions on Windows.</p>
 
----
+--- 
  
 <p align="center">
   <a href="../../releases"><img src="https://img.shields.io/github/v/release/DinosaursAreCute/wsl_ctl?style=flat-square&color=44cc11" alt="Latest release"></a>
