@@ -11,9 +11,9 @@ jobs:
   build:
     # Only run when commit message starts with patch|minor|major
     if: |
-      startsWith(github.event.head_commit.message, 'patch') ||
-      startsWith(github.event.head_commit.message, 'minor') ||
-      startsWith(github.event.head_commit.message, 'major')
+      startsWith(toLower(github.event.head_commit.message), 'patch') ||
+      startsWith(toLower(github.event.head_commit.message), 'minor') ||
+      startsWith(toLower(github.event.head_commit.message), 'major')
     runs-on: windows-latest
 
     steps:
