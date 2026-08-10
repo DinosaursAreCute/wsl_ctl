@@ -1,7 +1,7 @@
 <p align="center">
   <img src="assets/icon.ico" alt="WSL Controller" width="128">
 </p>
-
+  
 <h1 align="center">WSL Controller</h1>
 
 <p align="center">A terminal menu for managing WSL distributions on Windows.</p>
