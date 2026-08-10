@@ -8,7 +8,24 @@ permissions:
   contents: write
 
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 1 validating run start
+        run: echo "Job 1 validating run start"
+
+      - name: Echo if-condition result
+        run: |
+          MSG="${{ github.event.head_commit.message }}"
+          echo "Commit message: $MSG"
+          if [[ "$MSG" =~ ^[Pp][Aa][Tt][Cc][Hh] ]] || [[ "$MSG" =~ ^[Mm][Ii][Nn][Oo][Rr] ]] || [[ "$MSG" =~ ^[Mm][Aa][Jj][Oo][Rr] ]]; then
+            echo "if-condition result: TRUE - build job will run"
+          else
+            echo "if-condition result: FALSE - build job will be skipped"
+          fi
+
   build:
+    needs: debug
     # Only run when commit message starts with patch|minor|major
     if: "startsWith(github.event.head_commit.message, 'patch') || startsWith(github.event.head_commit.message, 'minor') || startsWith(github.event.head_commit.message, 'major')"
     runs-on: windows-latest
